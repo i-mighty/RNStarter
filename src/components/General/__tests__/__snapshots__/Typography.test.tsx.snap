@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItalicsText renders properly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#333333",
+        "fontStyle": "italic",
+      },
+    ]
+  }
+  testID="ItalicsText"
+/>
+`;
+
+exports[`ItalicsText renders with the color from prop 1`] = `
+<Text
+  color="#F89505"
+  style={
+    Array [
+      Object {
+        "color": "#F89505",
+        "fontStyle": "italic",
+      },
+    ]
+  }
+  testID="ItalicsText"
+/>
+`;
+
+exports[`PlainText renders properly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#333333",
+        "fontStyle": "normal",
+      },
+    ]
+  }
+  testID="PlainText"
+/>
+`;
+
+exports[`PlainText renders with the color from prop 1`] = `
+<Text
+  color="#F89505"
+  style={
+    Array [
+      Object {
+        "color": "#F89505",
+        "fontStyle": "normal",
+      },
+    ]
+  }
+  testID="PlainText"
+/>
+`;
+
+exports[`TitleText renders properly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#333333",
+        "fontSize": 21,
+      },
+    ]
+  }
+  testID="TitleText"
+/>
+`;
+
+exports[`TitleText renders with the color from prop 1`] = `
+<Text
+  color="#F89505"
+  style={
+    Array [
+      Object {
+        "color": "#F89505",
+        "fontSize": 21,
+      },
+    ]
+  }
+  testID="TitleText"
+/>
+`;

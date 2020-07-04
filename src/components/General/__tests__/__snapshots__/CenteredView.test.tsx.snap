@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CenteredView centralizes all components 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "flex": 1,
+            "height": 1334,
+          },
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+        ]
+      }
+      testID="CenteredView"
+    />
+  </View>
+</View>
+`;
+
+exports[`CenteredView renders properly  1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "flex": 1,
+            "height": 1334,
+          },
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
