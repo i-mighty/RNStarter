@@ -16,7 +16,7 @@
     "android-bundle-release": "cd android && ./gradlew bundleRelease --no-daemon",
     "android-bundle-js": "react-native bundle --platform android --dev false --entry-file ./index.js --bundle-output ./android/app/src/main/assets/index.bundle --sourcemap-output ./android/app/src/main/assets/index.map --assets-dest ./android/app/src/main/res/",
     "lint": "eslint . --fix",
-    "prettier": "eslint . --fix && prettier --write",
+    "prettier": "prettier --write",
     "android-debug-e2e-build": "detox build --configuration android.emu.debug",
     "android-debug-e2e-run": "detox test --configuration android.emu.debug",
     "android-dropbox-upload": "node dropbox-upload.js"
