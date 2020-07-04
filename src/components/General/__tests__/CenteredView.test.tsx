@@ -1,7 +1,7 @@
+/*eslint-disable */
 import React from 'react';
 import { renderWithProps } from '@src/utils/test-utils';
 import CenteredView from '../CenteredView';
-
 const props = {
   testID: 'CenteredView',
 };

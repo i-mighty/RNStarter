@@ -22,7 +22,7 @@ const QuoteItem: React.FC<QuoteItemProps> = ({ title, quote, author }) => {
       </StyledCardItem>
       <StyledCardItem footer>
         <Right>
-          <ItalicsText>-{author}</ItalicsText>
+          <ItalicsText>{author}</ItalicsText>
         </Right>
       </StyledCardItem>
     </StyledCard>

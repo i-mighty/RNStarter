@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import { Card, CardItem } from 'native-base';
-
+/*eslint-disable */
 const StyledCard = styled(Card)<{ backgroundColor?: string }>`
   background-color: ${({ theme, backgroundColor }) =>
     backgroundColor ? backgroundColor : theme.vars.white};

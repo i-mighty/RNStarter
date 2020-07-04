@@ -1,12 +1,5 @@
-import {
-  all,
-  call,
-  fork,
-  put,
-  takeEvery,
-  takeLatest,
-} from 'redux-saga/effects';
 import { Toast } from 'native-base';
+import { all, fork, takeEvery, takeLatest } from 'redux-saga/effects';
 import {
   AppNotificationActionTypes,
   ReportErrorAction,
@@ -14,7 +7,7 @@ import {
 } from './types';
 
 function* showErrorToast(action: ReportErrorAction) {
-  Toast.show({
+  yield Toast.show({
     text: action.payload.error,
     type: 'danger',
     duration: 5000,
@@ -22,7 +15,7 @@ function* showErrorToast(action: ReportErrorAction) {
 }
 
 function* showMessageToast(action: ReportMessageAction) {
-  Toast.show({
+  yield Toast.show({
     text: action.payload.message,
     type: 'success',
     duration: 5000,

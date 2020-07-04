@@ -1,17 +1,13 @@
+import { fetchQuoteRequest, QuoteResponse } from '@src/services/quote';
 import {
-  all,
-  call,
-  fork,
-  put,
-  takeEvery,
-  takeLatest,
-} from 'redux-saga/effects';
-import { setAppLoading } from '@src/stores/appNotification/actions';
+  alertError,
+  alertMessage,
+  setAppLoading,
+} from '@src/stores/appNotification/actions';
+import { fetchQuoteSuccess } from '@src/stores/quote/actions';
 import { QuoteActionTypes } from '@src/stores/quote/types';
 import { ApiResponse } from 'apisauce';
-import { QuoteResponse, fetchQuoteRequest } from '@src/services/quote';
-import { fetchQuoteSuccess } from '@src/stores/quote/actions';
-import { alertError, alertMessage } from '@src/stores/appNotification/actions';
+import { all, call, fork, put, takeLatest } from 'redux-saga/effects';
 
 function* fetchQuote() {
   yield put(setAppLoading(true));
