@@ -7,6 +7,6 @@ describe('Example', () => {
 
   it('should have welcome screen', async () => {
     await expect(element(by.id('title'))).toBeVisible();
-    await expect(element(by.id('title'))).toContain('Welcome to RNStarter.');
+    await expect(element(by.id('title'))).toHaveText('Welcome to RNStarter.');
   });
 });
