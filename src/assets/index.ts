@@ -1,3 +1,3 @@
-import ReactNativeSVG from './react-native.svg';
+import ReactNativeSVG from './General/react-native.svg';
 
 export { ReactNativeSVG };
