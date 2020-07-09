@@ -9,6 +9,9 @@ module.exports = {
   ],
   testPathIgnorePatterns: ['/node_modules', '/e2e/'],
   transformIgnorePatterns: [
-    'node_modules/(?!react-native|native-base-shoutem-theme|@shoutem/animation|@shoutem/ui|tcomb-form-native)',
+    'node_modules/(?!react-native|native-base-shoutem-theme|@shoutem/animation|@shoutem/ui|tcomb-form-native|!native-base)',
   ],
+  moduleNameMapper: {
+    '\\.svg': '<rootDir>/__mocks__/svgMock.js',
+  },
 };
