@@ -9,8 +9,8 @@
 
 Anyone who had to setup a React Native project from scratch would agree that it takes a lot of time and really can be quite some stress. This project contains a very easy to use React Native boilerplate for your next app. This project was made from the ground to be robust and very flexible support so it is easy to add new libraries as well remove unused libraries from the initial setup. The initial setup contains: 
 
-- [React Native](https://reactnative.dev/docs)
-- [Typescript](https://www.typescriptlang.org/docs/home.html)
+- React Native
+- Typescript
 - [NativeBase](https://nativebase.io/)
 - [Styled Components](https://styled-components.com/docs)
 - [React Navigation](https://reactnavigation.org/docs/getting-started)
@@ -226,7 +226,9 @@ Redux-Saga: Official [Documentation](https://redux-saga.js.org/),
 
 ### Apisauce
 
-Thanks to Infinitered for this awesome library. Apisauce is an easy to use wrapper around the very famous (or infamous) axios HTTP client. Apisauce provides standardized errors and a set of very easy to use libraries. To use Apisauce, simply create a new Apisauce instance. For this project, all API requests and service files can be imported from `@src/services`.  An example has already been made. 
+Thanks to Infinitered for this awesome library. Apisauce is an easy to use wrapper around the very famous (or infamous) axios HTTP client. Apisauce provides standardized errors and a set of very easy to use libraries. To use Apisauce, simply create a new Apisauce instance. For this project, all API requests and service files can be imported from `@src/services`. 
+
+ An example has already been made. 
 
 ``` 
 import { create } from 'apisauce';
@@ -294,8 +296,109 @@ jest.mock(
 
 The setup is required to run tests on Components with TouchableOpacity. Hopefully, this would be taken out in the future.
 
-For, each component folder would contain a `__tests__` folder which contains the test for all the components with that folder.
-
-For example, for `@src/components/General`, files for both `CenteredView.tsx` and `Typography.tsx` are both in the  `__test__` folder. Also, the structure of the tests should closely mirror the folder structure and each test file should test a single component file. In a situation where a file has more than a single conponent
+For each component folder, there should be contained within it a `__tests__` folder which holds the test for all the components within that folder. For example, for `@src/components/General`, files for both `CenteredView.tsx` and `Typography.tsx` are both in the  `__test__` folder. Also, the structure of the tests should closely mirror the folder structure and each test file should test a single component file. In a situation where a file has more than a single component, I would generally put the tests into the same file. There is really no hard and fast rule about this and it is best to stick with what makes the most sense and would be the most intuitive to whoever goes through it. 
 
 ### Detox
+
+End to end application testing is a practice that is really not very common among mobile developers generally (or maybe my friends just hate tests). We all know it is usually very error prone, and complex to setup and use for the most part and platforms. However, the good guys at Detox created an awesome tools which can be used to run end to end tests on a variety of devices across both android and iOS. Detox generally solves most of the problems associated with end to end testing of  React Native specifically and mobile applications in general. 
+
+Although detox is already in the project, you need to have the detox-cli installed. If you can install it by running
+
+```
+npm install -g detox-cli
+```
+
+#### Android
+
+The following points would be required to get your tests up and running your end to end test for Android. 
+
+- First up, install an android virtual device. 
+
+- Then create a configuration with the virtual device name set as `avdName`. An example for a debug configuration would be: 
+
+  ```
+    "android.emu.debug": {
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ../",
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_3_API_28"
+      }
+    },
+    
+  ```
+
+  An example for a production build would be: 
+
+  ```
+    "android.emu.release": {
+      "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
+      "build": "cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && cd ../",
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_3_API_28"
+      }
+    },
+  ```
+
+- For attached devices such as a Physical phone or an external emulator (such as [Genymotion](https://www.genymotion.com/)), the configuration would look something like
+
+  ```
+    "android.emu.debug": {
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ../",
+      "type": "android.attached",
+      "device": {
+        "adbName": ""
+      }
+    },
+  ```
+
+  With type of `android.attached`,  `adbName` instead of `avdName` and `adbName` being the name (id) of the device gotten by running `adb devices` e.g `ce071717252a7f23017e`.
+
+- Build your test app by running
+
+  ```
+  detox build --configuration "name of your configuration"
+  ```
+
+- If tests would run on a debug build, the React Native bundler must be working. Open a new terminal and run:
+
+  ```
+  yarn start
+  ```
+
+- Finally run your tests by running
+
+  ```
+  detox test --configuration "name of your configuration"
+  ```
+
+#### iOS
+
+
+
+##### Further References:
+
+- Writing Detox tests: https://github.com/wix/Detox/blob/master/docs/Introduction.WritingFirstTest.md
+- Detox workflows: https://github.com/wix/Detox/blob/master/docs/Introduction.Workflows.md
+- Design principles: https://github.com/wix/Detox/blob/master/docs/More.DesignPrinciples.md
+
+### ESLint and Prettier
+
+To ensure your code is error free and consistently styled, this project uses ESlint and Prettier. 
+
+The default ESlint configuration extends `airbnb`, and `airbnb/hooks` and `@react-native-community` configurations. Plugins used are `prettier` and `detox` . The values here can also be modified as you wish. The prettier configuration is contained in the `.prettier` file and can be modified at will. 
+
+ESlint and Prettier can also be supercharged with git hooks to make lint and styling checks before git actions are performed. `Husky` is already install to automatically update known git hooks with actions as you may require. 
+
+##### Further References:
+
+- ESLint [documentation](https://eslint.org/docs/user-guide/getting-started)
+- Prettier [documentation](https://prettier.io/docs/en/index.html)
+- Husky [documentation](https://www.npmjs.com/package/husky)
+- https://dev.to/botreetechnologies/setting-up-husky-pre-commit-hook-with-eslint-prettier-and-lint-staged-for-react-and-react-native-d05
+
+## License 
+
+MIT
