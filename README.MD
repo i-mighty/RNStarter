@@ -11,15 +11,15 @@ Anyone who had to setup a React Native project from scratch would agree that it 
 
 - React Native
 - Typescript
-- [NativeBase](https://nativebase.io/)
-- [Styled Components](https://styled-components.com/docs)
-- [React Navigation](https://reactnavigation.org/docs/getting-started)
-- [Redux](https://redux.js.org/introduction/getting-started)
-- [Redux-Saga](https://redux-saga.js.org/)
-- [Apisauce](https://github.com/infinitered/apisauce)
-- [Testing Library](https://www.native-testing-library.com/docs/intro)
-- [Detox](https://github.com/wix/Detox)
-- ESLint and Prettier with pre-commit hooks
+- [NativeBase](#nativeBase)
+- [Styled Components](#styled-components)
+- [React Navigation](#react-navigation)
+- [Redux](#store)
+- [Redux-Saga](#store)
+- [Apisauce](#apisauce)
+- [Testing Library](#testing-library)
+- [Detox](#detox)
+- [ESLint and Prettier with pre-commit hooks](#eslint-and-prettier)
 
 ## Setting Up
 
@@ -123,6 +123,10 @@ import { Root } from 'native-base';
 
 This component has also been handled and you might never have to change it. Please refer to the docs here to get a deeper understanding.
 
+##### Further Reference: 
+
+- Official NativeBase [documentation](https://docs.nativebase.io/)
+
 ### Styled Components
 
 Styled components requires just a simple object to contain all variables passed. Values passed to styled-components are contained in `utils/theme` and can be customized to contain anything you want. Currently it contains `vars` for color and `dimens` for values used in various places within your app.  Next up add your theme object to your 
@@ -150,6 +154,11 @@ const TitleText = styled(Text)<{ color?: string }>`
 ```
 
 As you can see, we can perform almost any kind of logic can within the styled components. Thanks to the template literals (backticks).
+
+##### Further Reference:
+
+- Official Styled Components [documentation](https://styled-components.com/docs)
+- Styled Components for React Native [documentation](https://styled-components.com/docs/basics#react-native)
 
 ### React Navigation
 
