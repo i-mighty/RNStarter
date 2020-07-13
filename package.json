@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest -u --verbose",
+    "rename": "npx react-native-rename-next",
     "clear-watch": "watchman watch-del-all && watchman shutdown-server",
     "ios-bundle-js": "react-native bundle --dev false --entry-file index.ios.js --bundle-output ios/main.jsbundle --platform ios",
     "ios-build": "react-native run-ios --configuration Release",
@@ -20,43 +21,28 @@
     "android-debug-e2e-build": "detox build --configuration android.emu.debug",
     "android-debug-e2e-run": "detox test --configuration android.emu.debug",
     "ios-debug-e2e-build": "detox build --configuration ios.sim.debug ",
-    "ios-debug-e2e-run": "detox test --configuration ios.sim.debug ",
-    "android-dropbox-upload": "node dropbox-upload.js"
+    "ios-debug-e2e-run": "detox test --configuration ios.sim.debug "
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.5.0",
     "@react-navigation/stack": "^5.6.2",
-    "@types/react-native-loading-spinner-overlay": "^0.5.1",
-    "@types/react-redux": "^7.1.9",
-    "@types/redux-saga": "^0.10.5",
-    "@types/validator": "^13.0.0",
     "apisauce": "^1.1.1",
-    "dotenv": "^8.2.0",
-    "dropbox-v2-api": "^2.4.17",
-    "git-branch": "^2.0.1",
-    "lodash": "^4.17.15",
     "native-base": "^2.13.12",
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-animatable": "^1.3.3",
-    "react-native-app-intro-slider": "^4.0.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-loading-spinner-overlay": "^1.1.0",
-    "react-native-modal": "^11.5.6",
     "react-native-reanimated": "^1.9.0",
     "react-native-safe-area-context": "^3.0.2",
     "react-native-screens": "^2.8.0",
     "react-native-svg": "^12.1.0",
     "react-native-swipe-gestures": "^1.0.5",
-    "react-native-swiper": "^1.6.0-rc.3",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-connect-decorator": "^0.2.1",
     "redux-saga": "^1.1.3",
     "styled-components": "^5.1.0",
-    "typesafe-actions": "^5.1.0",
-    "validator": "^13.0.0"
+    "typesafe-actions": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -70,6 +56,8 @@
     "@types/react-native": "^0.62.5",
     "@types/react-native-swipe-gestures": "^1.0.4",
     "@types/react-test-renderer": "^16.9.2",
+    "@types/react-redux": "^7.1.9",
+    "@types/redux-saga": "^0.10.5",
     "@types/styled-components": "^5.1.0",
     "@typescript-eslint/parser": "^2.34.0",
     "babel-jest": "^24.9.0",
@@ -121,7 +109,7 @@
         "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ../",
         "type": "android.emulator",
         "device": {
-          "avdName": "Nexus_5X_API_26"
+          "avdName": "Pixel_3_API_28"
         }
       },
       "android.emu.release": {
@@ -129,7 +117,7 @@
         "build": "cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && cd ../",
         "type": "android.emulator",
         "device": {
-          "avdName": "Nexus_5X_API_26"
+          "avdName": "Pixel_3_API_28"
         }
       },
       "ios.sim.debug": {

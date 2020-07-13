@@ -3,7 +3,6 @@ import { useSelector } from '@src/stores';
 import React from 'react';
 import colorOpacity from '@src/utils/color-opacity';
 import theme from '@src/utils/theme';
-import { Root } from 'native-base';
 import RootNavigator from '@src/navigators/RootNavigator';
 
 const AppRoot: React.FC = () => {
@@ -16,9 +15,7 @@ const AppRoot: React.FC = () => {
         overlayColor={colorOpacity(theme.vars.black, 0.5)}
         textStyle={{ color: theme.vars.white }}
       />
-      <Root>
-        <RootNavigator />
-      </Root>
+      <RootNavigator />
     </>
   );
 };
