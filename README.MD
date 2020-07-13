@@ -2,12 +2,11 @@
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 
-
 # React Native Starter
 
 ## Overview
 
-Anyone who had to setup a React Native project from scratch would agree that it takes a lot of time and really can be quite some stress. This project contains a very easy to use React Native boilerplate for your next app. This project was made from the ground to be robust and very flexible support so it is easy to add new libraries as well remove unused libraries from the initial setup. The initial setup contains: 
+Anyone who had to setup a React Native project from scratch would agree that it takes a lot of time and really can be quite some stress. This project contains a very easy to use React Native boilerplate for your next app. This project was made from the ground to be robust and very flexible support so it is easy to add new libraries as well remove unused libraries from the initial setup. The initial setup contains:
 
 - React Native
 - Typescript
@@ -37,7 +36,7 @@ Before proceeding, you might want to rename your app. For that, run
 yarn rename "Your New App Name"
 ```
 
-Next in rename your package folder in androidTest  and change the package name in your DetoxTest.java folder to match the new package name
+Next in rename your package folder in androidTest and change the package name in your DetoxTest.java folder to match the new package name
 
 ```
 package Your New Package Name;
@@ -48,13 +47,13 @@ import com.wix.detox.Detox;
 
 ### Installation
 
-Install the app dependencies by running 
+Install the app dependencies by running
 
 ```
 yarn install
 ```
 
- That's literally all there is to it. you should be ready to deploy for your device platform 
+That's literally all there is to it. you should be ready to deploy for your device platform
 
 ```
 yarn run android // for android devices
@@ -74,7 +73,7 @@ react-native link native-base
 
 ### Directories
 
-The project uses an absolute path resolution system for all files (thanks to tsconfig baseUrl and path).  The baseUrl is the `src` folder and the root path alias is `@src`.  For example the store is imported as `@src/stores`. If you wish to change this default configuration, edit the following parts of the  `tsconfig` file.
+The project uses an absolute path resolution system for all files (thanks to tsconfig baseUrl and path). The baseUrl is the `src` folder and the root path alias is `@src`. For example the store is imported as `@src/stores`. If you wish to change this default configuration, edit the following parts of the `tsconfig` file.
 
 ```
 "compilerOptions":{
@@ -107,9 +106,9 @@ import platform from '@src/native-base-theme/variables/platform';
 
 **NB:** The order in which the HOC are arranged in `src/App.tsx` is super important to ensure that it all work well. It is advised not to change the order at all (except of course you are totally sure of what you are doing).
 
-Checkout the NativeBase documentation [here](https://docs.nativebase.io/Customize.html) for more explanation 
+Checkout the NativeBase documentation [here](https://docs.nativebase.io/Customize.html) for more explanation
 
-Also to use the Toast from NativeBase (used by default to report errors and messages), we need to add another wrapper to the root component of our application. 
+Also to use the Toast from NativeBase (used by default to report errors and messages), we need to add another wrapper to the root component of our application.
 
 ```
 import { Root } from 'native-base';
@@ -123,13 +122,13 @@ import { Root } from 'native-base';
 
 This component has also been handled and you might never have to change it. Please refer to the docs here to get a deeper understanding.
 
-##### Further Reference: 
+##### Further Reference:
 
 - Official NativeBase [documentation](https://docs.nativebase.io/)
 
 ### Styled Components
 
-Styled components requires just a simple object to contain all variables passed. Values passed to styled-components are contained in `utils/theme` and can be customized to contain anything you want. Currently it contains `vars` for color and `dimens` for values used in various places within your app.  Next up add your theme object to your 
+Styled components requires just a simple object to contain all variables passed. Values passed to styled-components are contained in `utils/theme` and can be customized to contain anything you want. Currently it contains `vars` for color and `dimens` for values used in various places within your app. Next up add your theme object to your
 
 ```
 import { ThemeProvider } from 'styled-components/native';
@@ -143,7 +142,7 @@ import { ThemeProvider } from 'styled-components/native';
 
 Please note that all the imports are from `styled-components/native` . For example, to make a Styled Component from the React Native Text component, here is how the code would be.
 
-``` 
+```
 import styled from 'styled-components/native';
 import { Text } from 'react-native';
 
@@ -162,9 +161,9 @@ As you can see, we can perform almost any kind of logic can within the styled co
 
 ### React Navigation
 
-Navigators should be stored in the `navigator` folder with sub-folders and composed into the RootNavigator which is imported into the Root Component. No special configurations were made  from the initial React Navigation installation. From here, simply install your desired navigator and get going with ease. 
+Navigators should be stored in the `navigator` folder with sub-folders and composed into the RootNavigator which is imported into the Root Component. No special configurations were made from the initial React Navigation installation. From here, simply install your desired navigator and get going with ease.
 
-We are starting with a StackNavigator, simply installed by running: 
+We are starting with a StackNavigator, simply installed by running:
 
 ```
 yarn add @react-navigation/stack
@@ -183,22 +182,22 @@ const StackNavigator = () => {
     <Stack.Navigator mode="modal">
       {
 	  	//Stack Screen components e.g <Stack.Screen name="Welcome" component={/*Route component goes here*/} />
-	  }      
+	  }
     </Stack.Navigator>
   );
 };
 
 ```
 
-Then you can export your navigator and create use it where ever as a component within your app. 
+Then you can export your navigator and create use it where ever as a component within your app.
 
 Further reference can be gotten from the official [documentation](https://reactnavigation.org/docs/getting-started).
 
 ### Store
 
-Although there is a lot of ways we can structure our files for stores, actions, sagas and their associated types, I was very intentional on creating a directory structure that was as easy to understanding as it was logically clean. It really should not take much to know where to find what file or folder and how to modify it. That being said, everything related to the app state management store is contained in the `stores` folder which should be further structured into sub-folders for the various parts of the store. 
+Although there is a lot of ways we can structure our files for stores, actions, sagas and their associated types, I was very intentional on creating a directory structure that was as easy to understanding as it was logically clean. It really should not take much to know where to find what file or folder and how to modify it. That being said, everything related to the app state management store is contained in the `stores` folder which should be further structured into sub-folders for the various parts of the store.
 
-Each sub-folder then should contain files for actions. reducers, sagas and types. If there are multiple files of each kind for a single store, sub-folders can be used for actions, sagas, reducers and types. 
+Each sub-folder then should contain files for actions. reducers, sagas and types. If there are multiple files of each kind for a single store, sub-folders can be used for actions, sagas, reducers and types.
 
 An example structure for an hypothetical user authentication system would be
 
@@ -229,17 +228,17 @@ Another hard choice I had to make was to Redux-Saga instead of Redux Thunk for s
 
 ##### Further Reference
 
-Redux: Official [Documentation](https://redux.js.org/introduction/getting-started), [Middlewares](https://redux.js.org/advanced/middleware), 
+Redux: Official [Documentation](https://redux.js.org/introduction/getting-started), [Middlewares](https://redux.js.org/advanced/middleware),
 
-Redux-Saga: Official [Documentation](https://redux-saga.js.org/), 
+Redux-Saga: Official [Documentation](https://redux-saga.js.org/),
 
 ### Apisauce
 
-Thanks to Infinitered for this awesome library. Apisauce is an easy to use wrapper around the very famous (or infamous) axios HTTP client. Apisauce provides standardized errors and a set of very easy to use libraries. To use Apisauce, simply create a new Apisauce instance. For this project, all API requests and service files can be imported from `@src/services`. 
+Thanks to Infinitered for this awesome library. Apisauce is an easy to use wrapper around the very famous (or infamous) axios HTTP client. Apisauce provides standardized errors and a set of very easy to use libraries. To use Apisauce, simply create a new Apisauce instance. For this project, all API requests and service files can be imported from `@src/services`.
 
- An example has already been made. 
+An example has already been made.
 
-``` 
+```
 import { create } from 'apisauce';
 
 const api = create({
@@ -259,19 +258,19 @@ Then feel free to use the new Apisauce instance anywhere within your application
 api.get('/request')';
 ```
 
-Requests can also be made with types 
+Requests can also be made with types
 
 ```
 api.get<RequestResponseType, RequestErrorType>('/request');
 ```
 
-All requests return a promise which can be listened for with an `await` within an `async` function. 
+All requests return a promise which can be listened for with an `await` within an `async` function.
 
 The Apisauce [documentation](https://github.com/inifinitered/apisauce) contains more information and usage of the functions.
 
 ### Testing Library
 
-One of the biggest concerns of new React Native developers is how to write and run component tests. Also with the use of UI libraries, it becomes much more twisted to setup and run test successfully. Thankfully, the good guys at testing-library gave us @testing-library/react-native (very different from react-native-testing-library). This app contains a very very robust bootstrap for component. It is typesafe and works perfectly with NativeBase and Styled Components. 
+One of the biggest concerns of new React Native developers is how to write and run component tests. Also with the use of UI libraries, it becomes much more twisted to setup and run test successfully. Thankfully, the good guys at testing-library gave us @testing-library/react-native (very different from react-native-testing-library). This app contains a very very robust bootstrap for component. It is typesafe and works perfectly with NativeBase and Styled Components.
 
 Test configurations can be found in the `jest.config.js` file which looks like the following
 
@@ -305,11 +304,11 @@ jest.mock(
 
 The setup is required to run tests on Components with TouchableOpacity. Hopefully, this would be taken out in the future.
 
-For each component folder, there should be contained within it a `__tests__` folder which holds the test for all the components within that folder. For example, for `@src/components/General`, files for both `CenteredView.tsx` and `Typography.tsx` are both in the  `__test__` folder. Also, the structure of the tests should closely mirror the folder structure and each test file should test a single component file. In a situation where a file has more than a single component, I would generally put the tests into the same file. There is really no hard and fast rule about this and it is best to stick with what makes the most sense and would be the most intuitive to whoever goes through it. 
+For each component folder, there should be contained within it a `__tests__` folder which holds the test for all the components within that folder. For example, for `@src/components/General`, files for both `CenteredView.tsx` and `Typography.tsx` are both in the `__test__` folder. Also, the structure of the tests should closely mirror the folder structure and each test file should test a single component file. In a situation where a file has more than a single component, I would generally put the tests into the same file. There is really no hard and fast rule about this and it is best to stick with what makes the most sense and would be the most intuitive to whoever goes through it.
 
 ### Detox
 
-End to end application testing is a practice that is really not very common among mobile developers generally (or maybe my friends just hate tests). We all know it is usually very error prone, and complex to setup and use for the most part and platforms. However, the good guys at Detox created an awesome tools which can be used to run end to end tests on a variety of devices across both android and iOS. Detox generally solves most of the problems associated with end to end testing of  React Native specifically and mobile applications in general. 
+End to end application testing is a practice that is really not very common among mobile developers generally (or maybe my friends just hate tests). We all know it is usually very error prone, and complex to setup and use for the most part and platforms. However, the good guys at Detox created an awesome tools which can be used to run end to end tests on a variety of devices across both android and iOS. Detox generally solves most of the problems associated with end to end testing of React Native specifically and mobile applications in general.
 
 Although detox is already in the project, you need to have the detox-cli installed. If you can install it by running
 
@@ -319,11 +318,11 @@ npm install -g detox-cli
 
 #### Android
 
-The following points would be required to get your tests up and running your end to end test for Android. 
+The following points would be required to get your tests up and running your end to end test for Android.
 
-- First up, install an android virtual device. 
+- First up, install an android virtual device.
 
-- Then create a configuration with the virtual device name set as `avdName`. An example for a debug configuration would be: 
+- Then create a configuration with the virtual device name set as `avdName`. An example for a debug configuration would be:
 
   ```
     "android.emu.debug": {
@@ -334,10 +333,10 @@ The following points would be required to get your tests up and running your end
         "avdName": "Pixel_3_API_28"
       }
     },
-    
+
   ```
 
-  An example for a production build would be: 
+  An example for a production build would be:
 
   ```
     "android.emu.release": {
@@ -363,7 +362,7 @@ The following points would be required to get your tests up and running your end
     },
   ```
 
-  With type of `android.attached`,  `adbName` instead of `avdName` and `adbName` being the name (id) of the device gotten by running `adb devices` e.g `ce071717252a7f23017e`.
+  With type of `android.attached`, `adbName` instead of `avdName` and `adbName` being the name (id) of the device gotten by running `adb devices` e.g `ce071717252a7f23017e`.
 
 - Build your test app by running
 
@@ -385,7 +384,95 @@ The following points would be required to get your tests up and running your end
 
 #### iOS
 
+The following points would be required to get your tests up and running your end to end test for iOS.
 
+- First up, install an iOS virtual device.
+
+## Prerequisites
+
+Running Detox (on iOS) requires the following:
+
+- Mac with macOS (at least macOS High Sierra 10.13.6)
+
+- Xcode 10.2+ with Xcode command line tools.
+  Xcode can be installed from the App Store, or the online [Apple developers page](https://developer.apple.com/download/more/) (requires a valid Apple ID to login).
+
+> Tip: Verify Xcode command line tools is installed by typing `gcc -v` in terminal (shows a popup if not installed)
+
+## Dependencies
+
+#### Install the latest version of [Homebrew](http://brew.sh)
+
+Homebrew is a package manager for macOS, we'll need it to install other command line tools.
+
+To ensure everything needed for Homebrew tool installation is installed, run
+
+```sh
+xcode-select --install
+```
+
+> Tip: Verify it works by typing in `brew -h` in a terminal to output list of available commands
+
+#### Install [applesimutils](https://github.com/wix/AppleSimulatorUtils)
+
+A collection of utils for Apple simulators, Detox uses it to communicate with the simulator.
+
+```sh
+brew tap wix/brew
+brew install applesimutils
+```
+
+> Tip: Verify it works by typing in `applesimutils` in a terminal to output the tool help screen
+
+## Configuration
+
+- Create a configuration with the virtual device name set as `type`. An example for a debug configuration would be:
+
+```
+  "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/RNStarter.app",
+        "build": "xcodebuild -workspace ios/RNStarter.xcworkspace -scheme RNStarter -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      }
+```
+
+An example for a production build would be:
+
+```
+ "ios.sim.release": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/RNStarter.app",
+        "build": "xcodebuild -workspace ios/RNStarter.xcworkspace -scheme RNStarter -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      }
+```
+
+- Build your test app by running
+
+  ```
+  detox build --configuration "name of your configuration"
+  ```
+
+> Tip: For the debug build, this is how the command looks like `detox build --configuration ios.sim.debug`
+
+- If tests would run on a debug build, the React Native bundler must be working. Open a new terminal and run:
+
+  ```
+  yarn start
+  ```
+
+- Finally run your tests by running
+
+  ```
+  detox test --configuration "name of your configuration"
+  ```
+
+> Tip: For the debug test, this is how the command looks like `detox test --configuration ios.sim.debug`
 
 ##### Further References:
 
@@ -395,11 +482,11 @@ The following points would be required to get your tests up and running your end
 
 ### ESLint and Prettier
 
-To ensure your code is error free and consistently styled, this project uses ESlint and Prettier. 
+To ensure your code is error free and consistently styled, this project uses ESlint and Prettier.
 
-The default ESlint configuration extends `airbnb`, and `airbnb/hooks` and `@react-native-community` configurations. Plugins used are `prettier` and `detox` . The values here can also be modified as you wish. The prettier configuration is contained in the `.prettier` file and can be modified at will. 
+The default ESlint configuration extends `airbnb`, and `airbnb/hooks` and `@react-native-community` configurations. Plugins used are `prettier` and `detox` . The values here can also be modified as you wish. The prettier configuration is contained in the `.prettier` file and can be modified at will.
 
-ESlint and Prettier can also be supercharged with git hooks to make lint and styling checks before git actions are performed. `Husky` is already install to automatically update known git hooks with actions as you may require. 
+ESlint and Prettier can also be supercharged with git hooks to make lint and styling checks before git actions are performed. `Husky` is already install to automatically update known git hooks with actions as you may require.
 
 ##### Further References:
 
@@ -408,6 +495,6 @@ ESlint and Prettier can also be supercharged with git hooks to make lint and sty
 - Husky [documentation](https://www.npmjs.com/package/husky)
 - https://dev.to/botreetechnologies/setting-up-husky-pre-commit-hook-with-eslint-prettier-and-lint-staged-for-react-and-react-native-d05
 
-## License 
+## License
 
 MIT
