@@ -1,0 +1,32 @@
+matrix:
+  include:
+    - os: linux
+      language: node_js
+      node_js: 
+        - "12"
+      before_install:
+        - nvm install 12 && nvm use 12
+      script: 
+        - yarn run test
+    - os: linux
+      language: android
+      jdk: oraclejdk8
+      sudo: required
+      android:
+        components:
+          - platform-tools
+          - tools
+          - build-tools-28.0.3
+          - android-21
+          - android-28
+          - sys-img-armeabi-v7a-android-21
+          - extra-android-m2repository
+          - extra-google-m2repository
+          - extra-google-google_play_services
+      before_install:
+        - nvm install 12 && nvm use 12
+      install: 
+        - yarn 
+      script:
+        - "./android/gradlew assembleRelease -p android/"
+
