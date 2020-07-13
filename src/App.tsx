@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleProvider } from 'native-base';
+import { StyleProvider, Root } from 'native-base';
 import getTheme from '@src/native-base-theme/components';
 import platform from '@src/native-base-theme/variables/platform';
 import { ThemeProvider } from 'styled-components/native';
@@ -18,7 +18,9 @@ const App: React.FC = () => {
       <NavigationContainer>
         <StyleProvider style={getTheme(platform)}>
           <ThemeProvider theme={theme}>
-            <AppRoot />
+            <Root>
+              <AppRoot />
+            </Root>
           </ThemeProvider>
         </StyleProvider>
       </NavigationContainer>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Left, Right } from 'native-base';
 import { TitleText, ItalicsText } from '@src/components/General/Typography';
 import { StyledCard, StyledCardItem } from './Card';
+import theme from '@src/utils/theme';
 
 interface QuoteItemProps {
   quote: string;
@@ -11,7 +12,7 @@ interface QuoteItemProps {
 
 const QuoteItem: React.FC<QuoteItemProps> = ({ title, quote, author }) => {
   return (
-    <StyledCard>
+    <StyledCard backgroundColor={theme.vars.grey}>
       <StyledCardItem>
         <Left>
           <ItalicsText>{title}</ItalicsText>

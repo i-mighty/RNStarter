@@ -1,4 +1,4 @@
-package com.hightable;
+package com.rnstarter;
 
 import com.wix.detox.Detox;
 

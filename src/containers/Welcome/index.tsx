@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import CenteredView from '@src/components/General/CenteredView';
 import { TitleText } from '@src/components/General/Typography';
 import theme from '@src/utils/theme';
+import { ReactNativeSVG } from '@src/assets';
 
 const Welcome = () => {
   const navigation = useNavigation();
@@ -17,6 +18,7 @@ const Welcome = () => {
       <TitleText testID="title" color={theme.vars.black}>
         Welcome to RNStarter.
       </TitleText>
+      <ReactNativeSVG width={128} height={128} />
       <Button testID="getInspiredButton" onPress={showModal}>
         <Text>Get Inspired</Text>
       </Button>
