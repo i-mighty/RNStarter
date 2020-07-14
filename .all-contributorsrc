@@ -11,9 +11,31 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/21091694?v=4",
       "profile": "https://github.com/i-mighty",
       "contributions": [
+        "ideas",
+        "code",
+        "test",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "rowlandekemezie",
+      "name": "Rowland I. Ekemezie",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15085641?v=4",
+      "profile": "https://rowlandekemezie.com",
+      "contributions": [
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "iamNarcisse",
+      "name": "iamNarcisse",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43097772?v=4",
+      "profile": "https://github.com/iamNarcisse",
+      "contributions": [
         "test",
         "code",
-        "ideas",
+        "platform",
         "maintenance"
       ]
     }
