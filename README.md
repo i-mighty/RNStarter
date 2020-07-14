@@ -497,5 +497,18 @@ ESlint and Prettier can also be supercharged with git hooks to make lint and sty
 - https://dev.to/botreetechnologies/setting-up-husky-pre-commit-hook-with-eslint-prettier-and-lint-staged-for-react-and-react-native-d05
 
 ## License
-
 MIT
+
+## Contributors ✨
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/i-mighty"><img src="https://avatars0.githubusercontent.com/u/21091694?v=4" width="100px;" alt=""/><br /><sub><b>Adegboye Josiah</b></sub></a><br /><a href="https://github.com/i-mighty/RNStarter/commits?author=i-mighty" title="Tests">⚠️</a> <a href="https://github.com/i-mighty/RNStarter/commits?author=i-mighty" title="Code">💻</a> <a href="#ideas-i-mighty" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-i-mighty" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
