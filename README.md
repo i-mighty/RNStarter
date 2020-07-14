@@ -509,6 +509,7 @@ MIT
 <table>
   <tr>
     <td align="center"><a href="https://github.com/i-mighty"><img src="https://avatars0.githubusercontent.com/u/21091694?v=4" width="100px;" alt=""/><br /><sub><b>Adegboye Josiah</b></sub></a><br /><a href="https://github.com/i-mighty/RNStarter/commits?author=i-mighty" title="Tests">⚠️</a> <a href="https://github.com/i-mighty/RNStarter/commits?author=i-mighty" title="Code">💻</a> <a href="#ideas-i-mighty" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-i-mighty" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://rowlandekemezie.com"><img src="https://avatars1.githubusercontent.com/u/15085641?v=4" width="100px;" alt=""/><br /><sub><b>Rowland I. Ekemezie</b></sub></a><br /><a href="#ideas-rowlandekemezie" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/i-mighty/RNStarter/pulls?q=is%3Apr+reviewed-by%3Arowlandekemezie" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/iamNarcisse"><img src="https://avatars2.githubusercontent.com/u/43097772?v=4" width="100px;" alt=""/><br /><sub><b>iamNarcisse</b></sub></a><br /><a href="https://github.com/i-mighty/RNStarter/commits?author=iamNarcisse" title="Tests">⚠️</a> <a href="https://github.com/i-mighty/RNStarter/commits?author=iamNarcisse" title="Code">💻</a> <a href="#platform-iamNarcisse" title="Packaging/porting to new platform">📦</a> <a href="#maintenance-iamNarcisse" title="Maintenance">🚧</a></td>
   </tr>
 </table>
