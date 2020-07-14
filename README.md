@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Build With TravisCI](https://travis-ci.org/i-mighty/RNStarter.svg?branch=master)
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
@@ -508,6 +508,7 @@ ESlint and Prettier can also be supercharged with git hooks to make lint and sty
 <table>
   <tr>
     <td align="center"><a href="https://github.com/i-mighty"><img src="https://avatars0.githubusercontent.com/u/21091694?v=4" width="100px;" alt=""/><br /><sub><b>Adegboye Josiah</b></sub></a><br /><a href="https://github.com/i-mighty/RNStarter/commits?author=i-mighty" title="Tests">⚠️</a> <a href="https://github.com/i-mighty/RNStarter/commits?author=i-mighty" title="Code">💻</a> <a href="#ideas-i-mighty" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-i-mighty" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://rowlandekemezie.com"><img src="https://avatars1.githubusercontent.com/u/15085641?v=4" width="100px;" alt=""/><br /><sub><b>Rowland I. Ekemezie</b></sub></a><br /><a href="#ideas-rowlandekemezie" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/i-mighty/RNStarter/pulls?q=is%3Apr+reviewed-by%3Arowlandekemezie" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
