@@ -5,7 +5,7 @@
 
 # React Native Starter
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/21wmgutqjfmm8qwvw54r.png)
+![RNStarter](https://dev-to-uploads.s3.amazonaws.com/i/tiwmovsyxzf5oal0hkwn.png)
 
 ## Overview
 
