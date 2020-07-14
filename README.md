@@ -499,9 +499,10 @@ ESlint and Prettier can also be supercharged with git hooks to make lint and sty
 - Husky [documentation](https://www.npmjs.com/package/husky)
 - https://dev.to/botreetechnologies/setting-up-husky-pre-commit-hook-with-eslint-prettier-and-lint-staged-for-react-and-react-native-d05
 
-## Contributors ✨
-
 ## License
+MIT
+
+## Contributors ✨
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -515,5 +516,3 @@ ESlint and Prettier can also be supercharged with git hooks to make lint and sty
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-MIT
