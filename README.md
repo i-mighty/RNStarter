@@ -5,6 +5,8 @@
 
 # React Native Starter
 
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/21wmgutqjfmm8qwvw54r.png)
+
 ## Overview
 
 Anyone who had to setup a React Native project from scratch would agree that it takes a lot of time and really can be quite some stress. This project contains a very easy to use React Native boilerplate for your next app. This project was made from the ground to be robust and very flexible, so it is easy to add new libraries as well remove unused libraries from the initial setup. The initial setup contains: 
