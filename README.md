@@ -498,10 +498,6 @@ ESlint and Prettier can also be supercharged with git hooks to make lint and sty
 
 ## Contributors ✨
 
-
-
-
-
 ## License
 
 MIT
