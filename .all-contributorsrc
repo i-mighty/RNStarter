@@ -16,6 +16,18 @@
         "ideas",
         "maintenance"
       ]
+    },
+    {
+      "login": "iamNarcisse",
+      "name": "iamNarcisse",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43097772?v=4",
+      "profile": "https://github.com/iamNarcisse",
+      "contributions": [
+        "test",
+        "code",
+        "platform",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
