@@ -16,6 +16,16 @@
         "ideas",
         "maintenance"
       ]
+    },
+    {
+      "login": "rowlandekemezie",
+      "name": "Rowland I. Ekemezie",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15085641?v=4",
+      "profile": "https://rowlandekemezie.com",
+      "contributions": [
+        "ideas",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
