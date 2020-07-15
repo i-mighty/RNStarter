@@ -5,6 +5,8 @@
 
 # React Native Starter
 
+<p style="text-align: center;"> ✨ A React Native Starter with 10+ commonly used libraries ✨ </p>
+
 ![RNStarter](https://dev-to-uploads.s3.amazonaws.com/i/tiwmovsyxzf5oal0hkwn.png)
 
 ## Overview
