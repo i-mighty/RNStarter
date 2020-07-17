@@ -10,6 +10,7 @@ import theme from '@src/utils/theme';
 import { Provider } from 'react-redux';
 import { store } from '@src/stores';
 import AppRoot from '@src/containers';
+// import { store as thunkStore, persistor } from './stores/configure.thunk';  //Use this if you prefer redux thunk
 
 const App: React.FC = () => {
   return (
