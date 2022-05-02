@@ -4,8 +4,7 @@
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 
 # React Native Starter
-
-<p style="text-align: center;"> ✨ A React Native Starter with 10+ commonly used libraries ✨ </p>
+✨ A React Native Starter with 10+ commonly used libraries ✨
 
 ![RNStarter](https://dev-to-uploads.s3.amazonaws.com/i/tiwmovsyxzf5oal0hkwn.png)
 
